@@ -1,0 +1,372 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>JB NET GIS Tool</title>
+
+<style>
+
+img { cursor: hand; }
+
+</style>
+
+
+<script language="javascript">
+
+var preload=new Image();
+
+preload.src="images/tool_browse_off.gif";
+function movepic(img_name,img_src) {
+document[img_name].src=img_src;
+}
+
+
+function help(){
+
+
+ window.open("../help/index.phtml","Normal","toolbar=no,menubar=no,location=no,scrollbars=yes,resize=yes,height=600,width=800");		
+}
+
+
+function browse_mode(){
+ parent.map_frame.document.mapserv.mode[0].checked = true;
+ parent.map_frame.document.mapserv.target = "map_frame";
+ movepic('button1','images/tool_browse_on.gif'); 
+ movepic('button2','images/tool_query_off.gif'); 
+ movepic('button3','images/tool_zoomin_off.gif'); 
+ movepic('button4','images/tool_zoomout_off.gif'); 
+ movepic('button5','images/tool_recenter1_on.gif'); 
+ //movepic('button6','images/tool_zoomfull_off.gif'); 
+ movepic('button7','images/tool_fit_off.gif'); 
+ //parent.map_frame.document.mapserv.submit();
+
+
+}
+
+function query_mode(){
+  parent.map_frame.document.mapserv.mode[1].checked = true;
+  //parent.document.mapserv.target = "map_frame";
+  movepic('button2','images/tool_query_on.gif'); 
+  movepic('button1','images/tool_browse_off.gif'); 
+  movepic('button3','images/tombol_off.gif'); 
+  movepic('button4','images/tombol_off.gif'); 
+  movepic('button5','images/tombol_off.gif'); 
+  //movepic('button6','images/tombol_off.gif'); 
+  movepic('button7','images/tombol_off.gif'); 
+}
+
+function zoomin(){
+  if (parent.map_frame.document.mapserv.mode[1].checked == true)
+  {
+
+  }
+  else
+  
+  {
+	parent.map_frame.document.mapserv.zoom[0].checked = true;
+	movepic('button3','images/tool_zoomin_on.gif'); 
+	movepic('button4','images/tool_zoomout_off.gif'); 
+	movepic('button5','images/tool_recenter1_off.gif'); 
+  }
+}
+
+
+function zoomout(){
+if (parent.map_frame.document.mapserv.mode[1].checked == true)
+  {
+
+  }
+  else
+  {
+	parent.map_frame.document.mapserv.zoom[1].checked = true;
+	movepic('button3','images/tool_zoomin_off.gif'); 
+	movepic('button4','images/tool_zoomout_on.gif'); 
+	movepic('button5','images/tool_recenter1_off.gif'); 
+  }	
+}
+
+function zoomfull(){
+if (parent.map_frame.document.mapserv.mode[1].checked == true)
+  {
+
+  }
+  else
+  {
+	changeicon();
+	//movepic('button3','images/tool_zoomin_off.gif'); 
+	//movepic('button4','images/tool_zoomout_off.gif'); 
+	//movepic('button5','images/tool_recenter1_off.gif'); 
+	
+	//window.open("framemap.html","","height=400,width=720");
+	//window.open("/cgi-bin/mapserv.exe?map=/ms4w/Apache/htdocs/proyek/zoom.map&layers=" +newlayer+ "&mode=browse";","","");
+	//window.open("/cgi-bin/mapserv.exe?map=/ms4w/Apache/htdocs/proyek/zoomfull.map&layers=kabupaten_poly+host_point&mode=browse","","");
+	checkAll();
+  }	
+}
+
+function pan(){
+if (parent.map_frame.document.mapserv.mode[1].checked == true)
+  {
+
+  }
+  else
+  {
+	parent.map_frame.document.mapserv.zoom[2].checked = true;
+	changeicon();
+	//movepic('button3','images/tool_zoomin_off.gif'); 
+	//movepic('button4','images/tool_zoomout_off.gif'); 
+	//movepic('button5','images/tool_recenter1_on.gif'); 
+  }  
+}
+
+function fitwindow(){
+if (parent.map_frame.document.mapserv.mode[1].checked == true)
+  {
+
+  }
+  else
+  {
+    parent.map_frame.document.mapserv.zoom[3].checked = true;
+    parent.map_frame.fit();
+     
+    changeicon();
+  }
+}
+
+function changeicon(){
+
+	movepic('button3','images/tool_zoomin_off.gif'); 
+	movepic('button4','images/tool_zoomout_off.gif'); 
+	movepic('button5','images/tool_recenter1_on.gif'); 
+	movepic('button7','images/tool_fit_off.gif'); 
+}
+
+function run(){
+
+if (event.keyCode==13 )
+//oElement.onclick();
+
+  //alert('ENTER'); 
+  showlacak();
+}
+
+//Untuk menagnai zoomfull mode map
+///////////////////////////////////////////////////////////////////////
+
+var newlayer ='';
+					
+function checkAll() {
+
+/*	
+	if (parent.framekiri.document.checkboxform.host.checked == true) host();
+	
+	if (parent.framekiri.document.checkboxform.remote.checked == true) remote();
+	
+	if (parent.framekiri.document.checkboxform.bdgkabel.checked == true) bdgkabel();
+
+	if (parent.framekiri.document.checkboxform.cbnkabel.checked == true) cbnkabel();
+
+	if (parent.framekiri.document.checkboxform.cjrkabel.checked == true) cjrkabel();
+
+	if (parent.framekiri.document.checkboxform.grtkabel.checked == true) grtkabel();
+
+	if (parent.framekiri.document.checkboxform.rkskabel.checked == true) rkskabel();
+
+	if (parent.framekiri.document.checkboxform.skbikabel.checked == true) skbikabel();
+
+	if (parent.framekiri.document.checkboxform.subgkabel.checked == true) subgkabel();
+
+	if (parent.framekiri.document.checkboxform.tasikkabel.checked == true) tasikkabel();
+
+*/
+
+    if (parent.framekiri.document.checkboxform.host.checked == true) host();
+	
+	if (parent.framekiri.document.checkboxform.remote.checked == true) remote();
+	
+	if (parent.framekiri.document.checkboxform.kabel[0].checked == true) backbonekabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[1].checked == true) bdgkabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[2].checked == true) cjrkabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[3].checked == true) cbnkabel();
+	
+	if (parent.framekiri.document.checkboxform.kabel[4].checked == true) grtkabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[5].checked == true) rkskabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[6].checked == true) skbikabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[7].checked == true) subgkabel();
+
+	if (parent.framekiri.document.checkboxform.kabel[8].checked == true) tasikkabel();
+
+
+	if (parent.framekiri.document.checkboxform.label[0].checked == true) kabupatenlabel();
+
+	if (parent.framekiri.document.checkboxform.label[1].checked == true) kabupaten();
+
+	if (parent.framekiri.document.checkboxform.label[2].checked == true) kecamatanlabel();
+
+	if (parent.framekiri.document.checkboxform.label[3].checked == true) kecamatan();
+
+	if (parent.framekiri.document.checkboxform.jalan.checked == true) jalan();
+
+	if (parent.framekiri.document.checkboxform.jalanka.checked == true) kereta();
+	
+//"/cgi-bin/mapserv.exe?map=/ms4w/Apache/htdocs/proyek/zoom.map&layers=" +newlayer+ "&mode=browse",'p', 'toolbar=1, menubar=1, scrollbars=1');
+
+window.open("/cgi-bin/mapserv.exe?map=/ms4w/Apache/htdocs/proyek/zoomfull.map&layers=" +newlayer+ "&mode=browse","");
+
+newlayer ='';
+
+}
+							
+function host() {
+	newlayer = newlayer + "host_point+";
+ }
+
+function remote() {								    
+	newlayer = newlayer + "remote_point+";
+}
+
+function backbonekabel() {								    
+	newlayer = newlayer + "backbone_aerial+backbone__buried+";
+}
+
+function bdgkabel() {								    
+	newlayer = newlayer + "bdg_aerial_polyline+bdg_duct_polyline+bdg_buried_polyline+";
+}
+
+function cbnkabel(){								    
+	newlayer = newlayer + "cbn_aerial_polyline+cbn_duct_polyline+cbn_buried_polyline+cbn_subduct_polyline+";
+}
+
+function cjrkabel(){								    
+	newlayer = newlayer + "cjr_aerial_polyline+cjr_buried_polyline+";
+}
+
+function grtkabel(){								    
+	newlayer = newlayer + "grt_aerial_polyline+grt_duct_polyline+grt_buried_polyline+";
+}
+
+function rkskabel(){								    
+	newlayer = newlayer + "rks_aerial_polyline+rks_buried_polyline+";
+}
+
+function skbikabel(){								    
+	newlayer = newlayer + "skbi_aerial_polyline+skbi_subduct_polyline+skbi_buried_polyline+";
+}
+
+function subgkabel(){								    
+	newlayer = newlayer + "subg_aerial_polyline+subg_buried_polyline+";
+}
+
+function tasikkabel(){								    
+	newlayer = newlayer + "tasik_aerial_polyline+tasik_buried_polyline+";
+}
+
+function kabupaten() {							    		
+	newlayer = newlayer + "kabupaten+";
+
+}
+
+function kabupatenlabel() {							    		
+	newlayer = newlayer + "kabupaten_poly+";
+		
+}
+
+function kecamatan() {								    		
+	newlayer = newlayer + "kecamatan+";
+}
+
+function kecamatanlabel() {								    		
+	newlayer = newlayer + "kecamatan_region+";
+}
+
+function jalan() {								    		
+	newlayer = newlayer + "jalantol+jalan1+jalan2+jalan3+";
+}
+
+function kereta() {								    		
+	newlayer = newlayer + "jalanka+";
+}
+
+///////////////////////////////////////////////////////////////////////
+
+function showlacak(){
+var query, pilih;
+    
+	query = parent.frametool.query.value;
+	pilih = parent.frametool.pilihan.value;
+
+    parent.map_frame.document.mapserv.target = "map_frame";
+	top.query_frame.location.href="lacak.php?pilihan_var="+ pilih + "&query_var=" + query;
+	       
+    //panggil fungsi changeicon() agar tombol kembali normal
+	//parent.frametool.changeicon();
+	//alert("batas baru: " + document.mapserv.mapext.value);
+	//parent.frametool.pan();
+    return;
+
+    //window.open("lacak.php?pilihan_var="+ pilih + "&query_var=" + query,"Normal","toolbar=no,menubar=no,location=no,scrollbars=yes,resize=yes,height=300,width=400");		
+}
+
+
+</script>
+
+
+</head>
+
+<body bgcolor="#182484">
+
+
+
+<align="left"> 
+
+
+<font face="Verdana" color="#FFFFFF" size="2">&nbsp;<sup>Mode:</sup></font><font size="2">&nbsp;</font><img name="button1" border="0" src="images/tool_browse_on.gif" tool_browse_off.gif" width="20" height="20" onClick=browse_mode() ALT="Mode browse">
+
+<img name="button2" border="0" src="images/tool_query_off.gif" tool_query_off.gif" width="20" height="20" onClick=query_mode() ALT="Mode query">&nbsp;&nbsp;<font face="Verdana" color="#FFFFFF" size="2"><sup>Tool:</sup></font><font size="2">
+</font>
+
+<img name="button5" border="0" src="images/tool_recenter1_on.gif" width="20" height="20" onClick=pan() ALT="Recenter">
+<img name="button7" border="0" src="images/tool_fit_off.gif" width="20" height="20" onClick=fitwindow() ALT="Fit Map">
+<img name="button3" border="0" src="images/tool_zoomin_off.gif" width="20" height="20" onClick=zoomin() ALT="Zoom In">
+
+<img name="button4" border="0" src="images/tool_zoomout_off.gif" width="20" height="20" onClick=zoomout() ALT="Zoom Out">
+<!-- <img name="button6" border="0" src="images/tool_zoomfull_off.gif" width="20" height="20" onClick=zoomfull()> -->
+<img name="button9" border="0" src="images/help.gif" width="20" height="20" onClick=help() ALT="Help">&nbsp;
+
+<font color="#FFFFFF" face="Verdana"> <font size="2"><sup>Lacak: </sup></font></font><font size="2" face="Verdana">
+</font>
+
+
+<input type="text" name="query" size="15" onkeypress=run() style="font-family: Verdana; font-size: 10px" >
+ 
+ <select name=pilihan size="1" style="font-family: Verdana; font-size: 10px">
+    <option value=host >Host
+	<option value=remote >Remote
+	<!-- <option value=radio >Radio -->
+	<!-- <option value=link >Link -->
+	<option value=kabel >Kabel Fisik
+	<option value=logic >Kabel Logic
+</select> 
+
+<input type="button" name="caribtn" onClick=showlacak() onkeypress=run() value="  Go  " style="font-family: Verdana; font-size: 10px" >
+
+
+
+ <font color="#FFFFFF" face="Verdana" size="2">&nbsp;&nbsp;&nbsp;<sup>Long: </sup></font><input type="text" name="long" size="7" readonly style="font-family: Verdana; font-size: 11; color: #FFFFFF; border: 1px solid #182484; padding: 0; background-color: #182484" >&nbsp;&nbsp;&nbsp;
+ <font color="#FFFFFF" face="Verdana" size="2"><sup>Lat:</sup></font>
+ <input type="text" name="lat" size="5" readonly style="font-family: Verdana; font-size: 11; color: #FFFFFF; border: 1px solid #182484; padding: 0; background-color: #182484" >
+
+
+ 
+ </body>
+
+</html>

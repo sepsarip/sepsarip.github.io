@@ -1,0 +1,217 @@
+
+<HTML>
+<HEAD>
+
+<!-- <META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<LINK href="images/standard.css" type=text/css rel=stylesheet>
+<SCRIPT src="images/pngfix.js" defer type=text/javascript></SCRIPT> -->
+ 
+
+<link rel="StyleSheet" href="dtree/dtree.css" type="text/css" />
+
+<script type="text/javascript" src="dtree/dtree.js"></script>
+
+
+<script type="text/javascript">
+
+
+				
+function menu_simco(){
+
+d = new dTree('d');
+
+
+
+d.add('0','-1','CCNA','','Legend','_parent');
+
+d.add('D1','0','OSI','',' ','_parent');
+d.add('F10','D1','<a href="osilayer.html" target="framekanan"><font color=#3399FF><u>OSI Layer</u></font>','','  ','_parent','images/page.jpg');
+d.add('F11','D1','<a href="osidevice.html" target="framekanan"><font color=#3399FF><u>OSI & Perangkat</u></font>','','  ','_parent','images/page.jpg');
+d.add('F12','D1','<a href="osi.html" target="framekanan"><font color=#3399FF><u>Enkapsulasi data-1</u></font>','','  ','_parent','images/page.jpg');
+d.add('F13','D1','<a href="osiencap.html" target="framekanan"><font color=#3399FF><u>Enkapsulasi data-2</u></font>','','  ','_parent','images/page.jpg');
+d.add('F14','D1','<a href="osirouter.html" target="framekanan"><font color=#3399FF><u>OSI dan routing</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('D10','0','Perangkat Network 1','',' ','_parent');
+d.add('F54','D10','<a href="repeater.html" target="framekanan"><font color=#3399FF><u>Repeater</u></font>','','Tampilkan Resume Remote','_parent','images/page.jpg');
+d.add('F55','D10','<a href="hub.html" target="framekanan"><font color=#3399FF><u>Hub</u></font>','','  ','_parent','images/page.jpg');
+d.add('F56','D10','<a href="switch.html" target="framekanan"><font color=#3399FF><u>Switch</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('D20','0','Perangkat Network 2','',' ','_parent');
+d.add('F57','D20','<a href="bridge.html" target="framekanan"><font color=#3399FF><u>Bridge</u></font>','','  ','_parent','images/page.jpg');
+d.add('F58','D20','<a href="router.html" target="framekanan"><font color=#3399FF><u>Router</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('D30','0','Control access','',' ','_parent');
+d.add('F60','D30','<a href="csma.html" target="framekanan"><font color=#3399FF><u>CSMA/CD</u></font>','','  ','_parent','images/page.jpg');
+d.add('F61','D30','<a href="collision.html" target="framekanan"><font color=#3399FF><u>Collision</u></font>','','  ','_parent','images/page.jpg');
+d.add('F62','D30','<a href="token.html" target="framekanan"><font color=#3399FF><u>Token passing</u></font>','','  ','_parent','images/page.jpg');
+d.add('F63','D30','<a href="circuit-switching.html" target="framekanan"><font color=#3399FF><u>Circuit switching</u></font>','','  ','_parent','images/page.jpg');
+d.add('F64','D30','<a href="packet-switching.html" target="framekanan"><font color=#3399FF><u>Packet switching</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('D35','0','TCP/IP','',' ','_parent');
+d.add('F65','D35','<a href="arp.html" target="framekanan"><font color=#3399FF><u>ARP</u></font>','','  ','_parent','images/page.jpg');
+d.add('F66','D35','<a href="tcp.html" target="framekanan"><font color=#3399FF><u>Connection (TCP)</u></font>','','  ','_parent','images/page.jpg');
+d.add('F67','D35','<a href="udp.html" target="framekanan"><font color=#3399FF><u>Connectionless (UDP)</u></font>','','  ','_parent','images/page.jpg');
+d.add('F68','D35','<a href="tcpsliding.html" target="framekanan"><font color=#3399FF><u>Sliding Window</u></font>','','  ','_parent','images/page.jpg');
+d.add('F69','D35','<a href="tcpmultiplex.html" target="framekanan"><font color=#3399FF><u>Multiplexing</u></font>','','  ','_parent','images/page.jpg');
+
+
+
+d.add('D40','0','Teknik Switching','',' ','_parent');
+d.add('F70','D40','<a href="switchtrans.html" target="framekanan"><font color=#3399FF><u>Cara kerja switch</u></font>','','  ','_parent','images/page.jpg');
+d.add('F71','D40','<a href="switchstore.html" target="framekanan"><font color=#3399FF><u>Store forward</u></font>','','  ','_parent','images/page.jpg');
+d.add('F72','D40','<a href="switchcut.html" target="framekanan"><font color=#3399FF><u>Cut through</u></font>','','  ','_parent','images/page.jpg');
+d.add('F73','D40','<a href="switchfree.html" target="framekanan"><font color=#3399FF><u>Fragment free</u></font>','','  ','_parent','images/page.jpg');
+d.add('F74','D40','<a href="stp.html" target="framekanan"><font color=#3399FF><u>Spanning Tree Protocol</u></font>','','  ','_parent','images/page.jpg');
+d.add('F75','D40','<a href="vtp.html" target="framekanan"><font color=#3399FF><u>Cisco VTP</u></font>','','  ','_parent','images/page.jpg');
+
+
+
+d.add('D50','0','Contoh Perangkat','',' ','_parent');
+//d.add('D50','0','Contoh Perangkat','','Tampilkan inforamsi potensi infrastruktur','_parent');
+d.add('F80','D50','<a href="komputerdesktop.html" target="framekanan"><font color=#3399FF><u>Ethernet internal</u></font>','','  ','_parent','images/page.jpg');
+d.add('F81','D50','<a href="komputerlaptop.html" target="framekanan"><font color=#3399FF><u>Ethernet eksternal</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('F82','D50','<a href="ciscohub.html" target="framekanan"><font color=#3399FF><u>Micro Hub 1503</u></font>','','  ','_parent','images/page.jpg');
+d.add('F83','D50','<a href="ciscoswitch.html" target="framekanan"><font color=#3399FF><u>Switch 1924</u></font>','','  ','_parent','images/page.jpg');
+d.add('F84','D50','<a href="switchcluster.html" target="framekanan"><font color=#3399FF><u>Switch cluster</u></font>','','  ','_parent','images/page.jpg');
+d.add('F85','D50','<a href="ciscorouter.html" target="framekanan"><font color=#3399FF><u>Router 2621</u></font>','','  ','_parent','images/page.jpg');
+d.add('F86','D50','<a href="ciscohubon.html" target="framekanan"><font color=#3399FF><u>Router On/Off</u></font>','','  ','_parent','images/page.jpg');
+d.add('F87','D50','<a href="kabel.html" target="framekanan"><font color=#3399FF><u>Jenis Kabel</u></font>','','  ','_parent','images/page.jpg');
+
+//d.add('F88','D50','<a href="kabelcros_utp.html" target="framekanan"><font color=#3399FF><u>Kabel Crossover</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('F89','D50','<a href="kabelcrossover.html" target="framekanan"><font color=#3399FF><u>Kabel Crossover</u></font>','','  ','_parent','images/page.jpg');
+d.add('F90','D50','<a href="kabelrollover.html" target="framekanan"><font color=#3399FF><u>Kabel Rollover</u></font>','','  ','_parent','images/page.jpg');
+d.add('F91','D50','<a href="pasangrollover.html" target="framekanan"><font color=#3399FF><u>Instalasi kabel Rollover</u></font>','','  ','_parent','images/page.jpg');
+d.add('F92','D50','<a href="server.html" target="framekanan"><font color=#3399FF><u>Ruang server</u></font>','','  ','_parent','images/page.jpg');
+d.add('F93','D50','<a href="bahanutp.html" target="framekanan"><font color=#3399FF><u>Membuat Kabel UTP1 </u></font>','','  ','_parent','images/page.jpg');
+d.add('F94','D50','<a href="buatutp.html" target="framekanan"><font color=#3399FF><u>Membuat Kabel UTP2 </u></font>','','  ','_parent','images/page.jpg');
+d.add('F95','D50','<a href="pasangseratoptik1.html" target="framekanan"><font color=#3399FF><u>Membuat Fiber Optic</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('F96','D50','<a href="netanalyze1.html" target="framekanan"><font color=#3399FF><u>Network Analyzer 1</u></font>','','  ','_parent','images/page.jpg');
+d.add('F97','D50','<a href="netanalyze2.html" target="framekanan"><font color=#3399FF><u>Network Analyzer 2</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('D60','0','Instalasi & Konfigurasi GNS3','',' ','_parent');
+d.add('F98','D60','<a href="gns3/instalgns.html" target="framekanan"><font color=#3399FF><u>Instalasi GNS3</u></font>','','  ','_parent','images/page.jpg');
+d.add('F101','D60','<a href="gns3/ios.html" target="framekanan"><font color=#3399FF><u>Download IOS image</u></font>','','  ','_parent','images/page.jpg');
+
+//d.add('D70','0','Konfigurasi Emulator','',' ','_parent');
+d.add('F110','D60','<a href="gns3/konfigns.html" target="framekanan"><font color=#3399FF><u>Konfigurasi Umum</u></font>','','  ','_parent','images/page.jpg');
+d.add('F111','D60','<a href="gns3/konfigios.html" target="framekanan"><font color=#3399FF><u>Konfigurasi IOS Image</u></font>','','  ','_parent','images/page.jpg');
+d.add('F112','D60','<a href="gns3/testkonf.html" target="framekanan"><font color=#3399FF><u>Tes Konfigurasi</u></font>','','  ','_parent','images/page.jpg');
+d.add('F113','D60','<a href="gns3/testrouter.html" target="framekanan"><font color=#3399FF><u>Tes Router</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('D80','0','Eksplorasi GNS3','',' ','_parent');
+d.add('F120','D80','<a href="gns3/mulaigns.html" target="framekanan"><font color=#3399FF><u>Menu dan Fitur</u></font>','','  ','_parent','images/page.jpg');
+//d.add('F121','D80','<a href="gns3/start.html" target="framekanan"><font color=#3399FF><u>Start Router</u></font>','','  ','_parent','images/page.jpg');
+d.add('F121','D80','<a href="gns3/mulai.html" target="framekanan"><font color=#3399FF><u>Memulai Project</u></font>','','  ','_parent','images/page.jpg');
+//d.add('F121','D80','<a href="gns3/start.html" target="framekanan"><font color=#3399FF><u>Start Router</u></font>','','  ','_parent','images/page.jpg');
+d.add('F122','D80','<a href="gns3/telnet.html" target="framekanan"><font color=#3399FF><u>Telnet Router</u></font>','','  ','_parent','images/page.jpg');
+//d.add('F123','D80','<a href="gns3/simpan.html" target="framekanan"><font color=#3399FF><u>Simpan project</u></font>','','  ','_parent','images/page.jpg');
+//d.add('F124','D80','<a href="gns3/idlepc.html" target="framekanan"><font color=#3399FF><u>IdlePC</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('D150','0','Packet Tracer','',' ','_parent');
+d.add('F1400','D150','<a href="pt/pt1.html" target="framekanan"><font color=#3399FF><u>Memahami Interface 1</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1401','D150','<a href="pt/pt2.html" target="framekanan"><font color=#3399FF><u>Memahami Interface 2</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1402','D150','<a href="pt/pt3.html" target="framekanan"><font color=#3399FF><u>Menambah Aplikasi 1</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1403','D150','<a href="pt/pt4.html" target="framekanan"><font color=#3399FF><u>Menambah Aplikasi 2</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1404','D150','<a href="pt/pt5.html" target="framekanan"><font color=#3399FF><u>Menambah Aplikasi 3</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('F1405','D150','<a href="pt/multi1.html" target="framekanan"><font color=#3399FF><u>Multiuser 1</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1406','D150','<a href="pt/multi2.html" target="framekanan"><font color=#3399FF><u>Multiuser 2</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1407','D150','<a href="pt/multi3.html" target="framekanan"><font color=#3399FF><u>Multiuser 3</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1408','D150','<a href="pt/multi4.html" target="framekanan"><font color=#3399FF><u>Multiuser 4</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1409','D150','<a href="pt/multi5.html" target="framekanan"><font color=#3399FF><u>Multiuser 5</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1410','D150','<a href="pt/multi6.html" target="framekanan"><font color=#3399FF><u>Multiuser 6</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('D160','0','Utilitas Bantu','',' ','_parent');
+
+d.add('F1500','D160','<a href="gns3/wireshark.html" target="framekanan"><font color=#3399FF><u>Instalasi Wireshark</u></font>','','  ','_parent','images/page.jpg');
+d.add('F1501','D160','<a href="gns3/putty.html" target="framekanan"><font color=#3399FF><u>Instalasi Putty</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('D180','0','Linux OS','',' ','_parent');
+d.add('F1501','D180','<a href="linux.html" target="framekanan"><font color=#3399FF><u>Linux (Pinguin can fly)</u></font>','','  ','_parent','images/page.jpg');
+
+
+//============================= CCNP =================================
+
+d.add('10','-1','CCNP - ROUTE','','Legend','_parent');
+
+d.add('E1','10','GNS3','',' ','_parent');
+d.add('A1','E1','<a href="ccnp/komputer.html" target="framekanan"><font color=#3399FF><u>Menambah Komputer/Cloud</u></font>','','  ','_parent','images/page.jpg');
+//d.add('A0','E1','Menambah Komputer','',' ','_parent');
+//d.add('A2','E1','<a href="ccnp/gns3-1.html" target="framekanan"><font color=#3399FF><u>Konfigurasi Cloud</u></font>','','  ','_parent','images/page.jpg');
+d.add('A3','E1','<a href="ccnp/gns3-2.html" target="framekanan"><font color=#3399FF><u>Konfigurasi Telnet</u></font>','','  ','_parent','images/page.jpg');
+d.add('A4','E1','<a href="ccnp/gns3-3.html" target="framekanan"><font color=#3399FF><u>Telnet dari Komputer</u></font>','','  ','_parent','images/page.jpg');
+
+//d.add('A10','E1','Menghubungkan Network','',' ','_parent');
+d.add('A11','E1','<a href="ccnp/gns3-4.html" target="framekanan"><font color=#3399FF><u>Konfigurasi Loopback Adapter</u></font>','','  ','_parent','images/page.jpg');
+d.add('A12','E1','<a href="ccnp/gns3-5.html" target="framekanan"><font color=#3399FF><u>Konfigurasi Router</u></font>','','  ','_parent','images/page.jpg');
+d.add('A13','E1','<a href="ccnp/gns3-6.html" target="framekanan"><font color=#3399FF><u>Telnet Router</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('E10','10','EIGRP','',' ','_parent');
+d.add('A30','E10','<a href="ccnp/eigrp-metric.html" target="framekanan"><font color=#3399FF><u>EIGRP Metric Variable</u></font>','','  ','_parent','images/page.jpg');
+d.add('A31','E10','<a href="ccnp/eigrp-tabel.html" target="framekanan"><font color=#3399FF><u>Pembentukan EIGRP Table</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('E20','10','OSPF','',' ','_parent');
+d.add('B1','E20','<a href="ccnp/spf.html" target="framekanan"><font color=#3399FF><u>Path Terpendek</u></font>','','  ','_parent','images/page.jpg');
+d.add('B4','E20','<a href="ccnp/ospf-state.html" target="framekanan"><font color=#3399FF><u>OSPF State</u></font>','','  ','_parent','images/page.jpg');
+
+d.add('20','-1','CCNP - SWITCH','','Legend','_parent');
+
+d.add('F1','20','Prinsip dasar','',' ','_parent');
+d.add('A2','F1','<a href="ccnp/transparent.html" target="framekanan"><font color=#3399FF><u>Transparent Bridge</u></font>','','  ','_parent','images/page.jpg');
+d.add('A3','F1','<a href="ccnp/collision.html" target="framekanan"><font color=#3399FF><u>Collision Domain</u></font>','','  ','_parent','images/page.jpg');
+d.add('A4','F1','<a href="ccnp/broadcast.html" target="framekanan"><font color=#3399FF><u>Broadcast Domain</u></font>','','  ','_parent','images/page.jpg');
+d.add('A5','F1','<a href="ccnp/vtp.html" target="framekanan"><font color=#3399FF><u>VTP Domain</u></font>','','  ','_parent','images/page.jpg');
+d.add('A6','F1','<a href="ccnp/vtpmanfaat.html" target="framekanan"><font color=#3399FF><u>Manfaat VTP</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('G1','20','Teknik Switching','',' ','_parent');
+d.add('A1','G1','<a href="switchtrans.html" target="framekanan"><font color=#3399FF><u>Cara kerja switch</u></font>','','  ','_parent','images/page.jpg');
+d.add('A2','G1','<a href="switchstore.html" target="framekanan"><font color=#3399FF><u>Store forward</u></font>','','  ','_parent','images/page.jpg');
+d.add('A3','G1','<a href="switchcut.html" target="framekanan"><font color=#3399FF><u>Cut through</u></font>','','  ','_parent','images/page.jpg');
+d.add('A4','G1','<a href="switchfree.html" target="framekanan"><font color=#3399FF><u>Fragment free</u></font>','','  ','_parent','images/page.jpg');
+d.add('A5','G1','<a href="ccnp/stp-kerja.html" target="framekanan"><font color=#3399FF><u>Cara kerja STP</u></font>','','  ','_parent','images/page.jpg');
+d.add('A6','G1','<a href="ccnp/stp-topology.html" target="framekanan"><font color=#3399FF><u>STP Tree topology</u></font>','','  ','_parent','images/page.jpg');
+
+
+d.add('H1','20','VLAN','',' ','_parent');
+d.add('A1','H1','<a href="ccnp/isl.html" target="framekanan"><font color=#3399FF><u>Protokol ISL</u></font>','','  ','_parent','images/page.jpg');
+d.add('A2','H1','<a href="ccnp/8021q.html" target="framekanan"><font color=#3399FF><u>Protokol IEEE 802.1Q</u></font>','','  ','_parent','images/page.jpg');
+d.add('A3','H1','<a href="ccnp/pruning.html" target="framekanan"><font color=#3399FF><u>VTP Pruning</u></font>','','  ','_parent','images/page.jpg');
+
+
+document.write(d);
+
+}
+
+
+
+
+</script>
+
+</HEAD>
+
+<BODY bgcolor="white" >
+
+
+<script type="text/javascript">
+						
+
+menu_simco();
+
+</script>
+
+
+</BODY>
+
+
+</HTML>
