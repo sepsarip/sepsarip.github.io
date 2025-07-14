@@ -1,0 +1,154 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Header */
+.hero {
+    background-color: #0d1117;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid white;
+}
+
+.btn {
+    display: inline-block;
+    background: #238636;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2ea043;
+}
+
+/* Skills */
+.skills {
+    padding: 3rem 1rem;
+    background-color: white;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.skills h2 {
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    background-color: #c1c3c4;
+    color: #000000;
+}
+
+/* Efek hover */
+.badge:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Projects */
+.projects {
+    padding: 3rem 1rem;
+    background-color: #f0f0f0;
+}
+
+.project-card {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #238636;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-card > p {
+    text-align: justify;
+}
+
+.project-card:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.highlight {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Contact */
+.contact {
+    padding: 3rem 1rem;
+    background-color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #0d1117;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}
